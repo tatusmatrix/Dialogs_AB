@@ -37,4 +37,6 @@ console.log("0. un 1. bits: " + bit_sequence);
 */
 // sākumā var atrast un pielietot standarta JS funkciju, kas pārveido dec to bin
 // if, for utt. pagaidām izmantot nedrīkst
-document.getElementById("bin").innerHTML = bit_sequence;
+document.getElementById("bin_peec_algoritma").innerHTML = bit_sequence;
+
+document.getElementById("bin_peec_standarta_funkcijas").innerHTML = Number(x).toString(2);
