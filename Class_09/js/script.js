@@ -1,4 +1,4 @@
-var x = 60;
+var x = 100;
 document.getElementById("dec").innerHTML = x;
 
 /*
