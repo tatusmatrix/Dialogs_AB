@@ -1,35 +1,44 @@
 console.log("Skripta izpildes sākums:\n" + new Date());
-document.getElementById("manual_count").innerHTML = "1<br>2<br>3<br>4<br>";
+document.getElementById("manual_count").innerHTML = "manual count:<br>1<br>2<br>3<br>4<br>";
 
-let text = "";
+
+let text = "for classic:<br>";
 // for ( ; ; ){}
 // for ( sā - darbība_s ciklu uzsākot ; n - nosacījums_i cikla turpināšanai ; so - "soļa_u veikšana"){}
 // sā -> n (nosacījums ir spēkā) -> {} -> so -> n (-"-) -> {} -> so -> n (nav spēka)
 // pārējam pie nākamās darbības aiz cikla
 for (let i = 1; i < 5; i++) {
   text = text + i + "<br>";
-  if (i == 3){
+  if (i == 3) {
     break;
   }
 }
 document.getElementById("for_automatic_count_classic").innerHTML = text;
 
-text = "";
+
+text = "for non-classic:<br>";
 var i = 1;
-for ( ; i < 5 ; ) {
+for (; i < 5; ) {
   text = text + i + "<br>";
   i++;
 }
 document.getElementById("for_automatic_count_nonclassic").innerHTML = text;
 
-text = "";
+text = "while:<br>";
 var i = 1;
-while( i < 5 ) {
+while (i < 5) {
   text = text + i + "<br>";
   i++;
 }
 document.getElementById("while_automatic_count").innerHTML = text;
 
+text = "do while:<br>";
+var i = 1;
+do {
+  text = text + i + "<br>";
+  i++;
+} while (i < 5 && i == 2 );
+document.getElementById("do_while_automatic_count").innerHTML = text;
 
 /*
 a = Number(prompt("Cienījamais lietotāj, lūdzu, ievadi skitli: "));
@@ -51,18 +60,18 @@ for (let dalam = 1; dalam < 26; dalam++) {
   text = text + dalam;
   for (let k = 0; k < dalit.length; k++) {
     if (dalam % dalit[k] == 0) {
-        if (flag == 1){
-            text = text + " dalās ar skaitli ";
-            flag = 0;
-        }
+      if (flag == 1) {
+        text = text + " dalās ar skaitli ";
+        flag = 0;
+      }
       text = text + dalit[k] + ",";
     }
   }
 
-  if ( flag == 0 )
-  // ( flag != 1 )
-  {text = text.slice(0,text.length-1);}
-
+  if (flag == 0) {
+    // ( flag != 1 )
+    text = text.slice(0, text.length - 1);
+  }
 
   if (dalam % 2 == 0) {
     text = text + " pāra skaitlis ";
@@ -73,7 +82,9 @@ for (let dalam = 1; dalam < 26; dalam++) {
   text = text + "<BR>";
 }
 
-document.getElementById("for_automatic_count_until_25_denumerator_check").innerHTML = text;
+document.getElementById(
+  "for_automatic_count_until_25_denumerator_check"
+).innerHTML = text;
 
 /*
 text += cars[0] + "<br>";
