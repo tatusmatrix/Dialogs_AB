@@ -8,6 +8,9 @@ let text = "";
 // pārējam pie nākamās darbības aiz cikla
 for (let i = 1; i < 5; i++) {
   text = text + i + "<br>";
+  if (i == 3){
+    break;
+  }
 }
 document.getElementById("for_automatic_count_classic").innerHTML = text;
 
