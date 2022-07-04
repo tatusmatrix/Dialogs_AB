@@ -22,19 +22,49 @@ document.getElementById("count_3").innerHTML = text;
 
 /* koda fragments */
 
-function counter(N,html_el_id_nr) {
+/**
+ * @name counter
+ * @description Counting from 1 to N.
+ * @param {Number} N
+ * @param {Number} html_el_id_nr
+ *
+ * @returns {void} counter
+ */
+function counter(N, html_el_id_nr) {
   text = "for count until " + N + ":<br>";
   for (let i = 1; i <= N; i++) {
     text = text + i + "<br>";
   }
-  document.getElementById("count_"+html_el_id_nr).innerHTML = text;
+  document.getElementById("count_" + html_el_id_nr).innerHTML = text;
 }
 
-counter(20,4);
+counter(3, 4);
 
 /* koda fragments */
 
-counter(25,5);
+counter(4, 5);
+
+/**
+ * @name summator
+ * @description Sums a and b.
+ * @param {Number} a
+ * @param {Number} b
+ *
+ * @returns {Number} summator
+ */
+function summator(a, b) {
+  c = a + b;
+  return c;
+}
+
+function dialogs() {
+  var a = Number(prompt("Ievadiet a vērtību:")),
+    b = Number(prompt("Ievadiet b vērtību:"));
+  document.getElementById("summator_1").innerHTML =
+    a + " un " + b + " summa ir " + summator(a, b);
+}
+
+dialogs();
 
 
 /*
