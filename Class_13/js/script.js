@@ -134,3 +134,5 @@ text = text + cars[0] + "<br>";
 // 1. skaitīt no 1 līdz 25
 // 2. pārbaudīt vai dalās ar 2 (3, 5, 7)
 // => ņemt kārtējo skaitli un secīgi dalīt ar 2, 3, 5, 7
+
+alert
