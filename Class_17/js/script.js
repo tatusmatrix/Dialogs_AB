@@ -1,5 +1,18 @@
+// https://www.w3schools.com/js/js_objects.asp
+// https://www.w3schools.com/js/js_object_definition.asp
+
 // objekta definēšana ar literāļa palīdzību
 const car = { type: "Fiat", model: "500", color: "white" };
+// literālis var būt arī pavisam tukšs - {} -
+// un tad īpašības (un metodes) var pievienot pēc nepieciešamības
+car.price = 1000; 
+
+// objekta definēšana ar atslēgas vārda new palīdzību
+const airplane = new Object();
+// un tad īpašības (un metodes) var pievienot pēc nepieciešamības
+airplane.price = 1000000; 
+
+
 
 // objekta īpašības (property) izgūšana
 // console.log(car.type);
@@ -47,3 +60,6 @@ const EU = {
     return this.countries.find(EU_country_find) == undefined ? "Not EU" : "EU";
   },
 };
+
+console.log(this.prompt_value);
+console.log(prompt_value);
