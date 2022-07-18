@@ -4,7 +4,7 @@
 * atsevišķā ārējā failā (kut kur tīkla)
 + scopes - {}
 + JS programmēšanas valodas teikumi parasti beidzās ar - ;
-** Browser + Inspect + Console
+** Browser + Inspect + Console (Ctrl + L)
                      + Source + Debug
 
 1. variables (mainīgie)
@@ -33,7 +33,9 @@
 + for( ; ; ){}
 + while(){}
 + do{}while()
-++ for (array_current_element of array)
+++ break;
++++ for (current_element of array)
++++ for (current_property in object)
 
 5. functions
 + function function_name(function_arguments){function_body} - definition with statement
@@ -46,7 +48,10 @@
 + properties (īpašības) - object_name.object_property_name
                           object_name["object_property_name"]
 + methods (funkcijas)
++ this (Window, Object, HTML element in case of event)
 ++ const object_name = {};
    const object_name = new Object();
 ++ object_name.object_property_name = object_property_value;
-+++ pārlūku iebuvēti objekti (console)
+++ object_name.object_method_name.call(other_object_name,object_method_arguments);
+++ other_object_name.other_object_method_name = object_name.object_method_name.bind(other_object_name);
++++ pārlūku iebuvēti objekti (Window,console)
