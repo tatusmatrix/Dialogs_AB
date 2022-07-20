@@ -34,8 +34,10 @@
 + while(){}
 + do{}while()
 ++ break;
-+++ for (current_element of array)
-+++ for (current_property in object)
++++ for (let current_element of array) - current_element contains value
++++ for (let current_element in array) - current_element contains index
++++ for (let current_property in object) - current_property contains property name
++++ for (let current_property of object) - Isn't possible! - object is not iterable
 
 5. functions
 + function function_name(function_arguments){function_body} - definition with statement
@@ -52,6 +54,15 @@
 ++ const object_name = {};
    const object_name = new Object();
 ++ object_name.object_property_name = object_property_value;
+++ Object.defineProperty(object_name, "object_property_name", {
+   value: ...,
+   writable: true/false,
+   enumerable: true/false,
+   configurable: true/false});
+++ Object.values(object_name) -> array with values of properties
+                                 and descriptions of methods
+++ JSON.stringify(object_name) -> symbol string with stringified property names
+                                  and their values (NB! in output no methods)
 ++ object_name.object_method_name.call(other_object_name,object_method_arguments);
 ++ other_object_name.other_object_method_name = object_name.object_method_name.bind(other_object_name);
 +++ pārlūku iebuvēti objekti (Window,console)

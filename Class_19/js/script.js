@@ -18,18 +18,26 @@ obj2.property1 = 20;
 
 Object.defineProperty(obj2, "property2", {
   value: 100,
-  enumerable: false,
+  enumerable: true,
 });
 
 Object.defineProperty(obj2, "property3", {
-    value: "Aaaa",
-    configurable: false,
-  });
-  
+  value: "Aaaa",
+  configurable: false,
+});
+
 let txt = "";
 for (let current_property in obj1) {
   txt += current_property + ": " + obj1[current_property] + "<br>";
 }
+
+for (let current_property in obj1) {
+  console.log(current_property);
+}
+
+//for (let current_property of obj1) {
+//  console.log(current_property);
+//}
 
 document.getElementById("demo1").innerHTML = txt;
 
