@@ -21,9 +21,16 @@ Object.defineProperty(obj2, "property2", {
   enumerable: false,
 });
 
+Object.defineProperty(obj2, "property3", {
+    value: "Aaaa",
+    configurable: false,
+  });
+  
 let txt = "";
 for (let current_property in obj1) {
-  txt += obj1[current_property] + " ";
+  txt += current_property + ": " + obj1[current_property] + "<br>";
 }
 
 document.getElementById("demo1").innerHTML = txt;
+
+delete obj2.property3;
