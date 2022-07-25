@@ -1,31 +1,34 @@
 const person = {
-    firstName: "John",
+    firstName: "",
     lastName: "Doe",
     language: "",
     get_language: function(){
         return `${this.firstName} knows ${this.language}`;  
     },
-    set_language: function(lang){
+    set_language: function(firstName,lang){
+        this.firstName = firstName;  
         this.language = lang;  
     },
     get lang() {
       return `${this.firstName} knows ${this.language}`;
     },
-    set lang(lang) {
+    set lang([firstName,lang]) {
+        this.firstName = firstName;
         this.language = lang;
       }
 };
 
 // Set data from the object using data property:
+person.firstName = "Carl";
 person.language = "ee";
 document.getElementById("demo1").innerHTML = person.lang;
 
 // Set data to the object using method:
-person.set_language("lt");
+person.set_language("Mike","lt");
 document.getElementById("demo2").innerHTML = person.lang;
 
 // Set data to the object using a setter:
-person.lang = "lv";
+person.lang = ["Gregory","lv"];
 document.getElementById("demo3").innerHTML = person.lang;
 
 /*
