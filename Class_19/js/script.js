@@ -42,3 +42,9 @@ for (let current_property in obj1) {
 document.getElementById("demo1").innerHTML = txt;
 
 delete obj2.property3;
+
+/*
+setTimeout(() => {
+  window.open("http://127.0.0.1:5500/Dialogs_AB/Class_18/", "original");
+}, 3000);
+*/
