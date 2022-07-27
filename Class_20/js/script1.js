@@ -1,3 +1,12 @@
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol
+// https://developer.mozilla.org/en-US/docs/Glossary/Object
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#data_property
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object
+// https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Object_prototypes
+// https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Classes_in_JavaScript
+// https://www.w3schools.com/js/js_object_properties.asp
+// https://www.w3schools.com/js/js_object_prototypes.asp
+
 // https://www.w3schools.com/js/js_object_constructors.asp
 
 // Constructor function for Person objects
