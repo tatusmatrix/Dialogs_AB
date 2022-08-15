@@ -69,5 +69,5 @@ for (const entry of urlParams.entries()) {
 }
 console.log(entries_);
 
-console.log(  rlParams.has('q1'));
+console.log(urlParams.has('q1'));
 console.log(urlParams.has('q3'));
