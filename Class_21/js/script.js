@@ -42,6 +42,9 @@ setTimeout(() => {
 }, 9000);
 
 
+// Class_22 nodarbībai
+// https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams
+
 const urlParams = new URLSearchParams(location.search);
 
 for (const [key, value] of urlParams) {
