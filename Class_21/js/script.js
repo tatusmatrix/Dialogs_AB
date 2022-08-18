@@ -1,3 +1,17 @@
+// Nodarbības laikā un pēc tās ir jāiepzistās ar:
+// window objektu (pārluka logs, tā īpašības un iespējamas darbības) - https://www.javascripttutorial.net/javascript-bom/javascript-window/
+// paziņojumu/dialogu metodēm:
+//   brīdinājums - alert() - https://www.javascripttutorial.net/javascript-bom/javascript-alert/
+//   apstiprinājums - confirm() - https://www.javascripttutorial.net/javascript-bom/javascript-confirm/
+//   uzvedne - prompt() - https://www.javascripttutorial.net/javascript-bom/javascript-prompt/
+// "Note that the alert/confirm/prompt dialog is synchronous and modal.
+//  It means that the code execution stops when a dialog is displayed and resumes after it has been dismissed."
+// darbību palaišanas laiku - taimeru - uzdošanas metodēm un kontroli:
+//   taimeris - setTimeout() - https://www.javascripttutorial.net/javascript-bom/javascript-settimeout/
+//   cikliskais taimeris - setInterval() - https://www.javascripttutorial.net/javascript-bom/javascript-setinterval/
+
+// Aktuālākā informācija par Window īpašībām un metodēm - https://developer.mozilla.org/en-US/docs/Web/API/Window
+
 window.name = "original";
 
 let jsWindow = window.open(

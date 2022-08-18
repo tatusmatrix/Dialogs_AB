@@ -1,3 +1,9 @@
+// Nodarbības laikā un pēc tās ir jāiepzistās ar:
+// vienotā resursu vietrāža izgūšanu un analīzi - URL - https://www.javascripttutorial.net/javascript-bom/javascript-location/
+// parametru izgūšanu no URL search daļas - query string - https://www.javascripttutorial.net/javascript-bom/javascript-get-query-string/
+
+// Aktuālākā informācija par Location īpašībām un metodēm - https://developer.mozilla.org/en-US/docs/Web/API/Window/location
+
 // location
 console.log(window.location);
 console.log(document.location);
