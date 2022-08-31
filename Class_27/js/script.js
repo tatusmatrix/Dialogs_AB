@@ -38,7 +38,12 @@ btn.addEventListener('click', (event) => {// 'mousedown' 'mouseup' 'mouseover'
 
 // https://developer.mozilla.org/en-US/docs/Web/API/Event/currentTarget
 function hide(e){
-    e.currentTarget.style.visibility = 'hidden';
+    let currentTarget_ = e.currentTarget;
+    //console.log(currentTarget_.tagName);
+    if (currentTarget_.tagName == 'P')
+        setTimeout(() => {currentTarget_.style.visibility = 'hidden';}, 1000);
+    else
+        setTimeout(() => {currentTarget_.style.visibility = 'hidden';}, 2000);
     console.log("e.currentTarget: ",e.currentTarget);
     console.log("e.target: ",e.target);
     // When this function is used as an event handler: this === e.currentTarget
