@@ -36,6 +36,11 @@ btn.addEventListener('click', (event) => {// 'mousedown' 'mouseup' 'mouseover'
     console.log("event.defaultPrevented (after event.preventDefault()): "+event.defaultPrevented);
 });
 
+btn.addEventListener('keypress', (event) => {
+    console.log("event.keyCode: "+event.keyCode);
+
+});
+
 // https://developer.mozilla.org/en-US/docs/Web/API/Event/currentTarget
 function hide(e){
     let currentTarget_ = e.currentTarget;
