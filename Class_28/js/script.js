@@ -35,3 +35,35 @@ siblingText = siblings.map(e => e.innerHTML);
 console.log("siblings: ",siblings);
 console.log("children of parent: ",document.querySelector('.current').parentElement.children);
 console.log("siblings texts: ",siblingText);
+
+// https://www.javascripttutorial.net/javascript-dom/javascript-createelement/
+let div = document.createElement('div');
+div.id = 'content';
+div.className = 'note';
+// div.innerHTML = '<p>CreateElement example (inside p tag)</p>';
+// let text = document.createTextNode('CreateElement example (outside <p>)');
+// div.appendChild(text);
+let p = document.createElement('p');
+p.textContent = 'CreateElement example (inside <p>)';
+div.appendChild(p);
+document.body.appendChild(div);
+
+
+// select the ul menu element
+const menu = document.querySelector('#menu');
+
+let li = document.createElement('li');
+li.textContent = 'Products 1';
+menu.appendChild(li);
+console.log(menu.children);
+
+li = document.createElement('li');
+li.textContent = 'About Us 1';
+menu.appendChild(li);
+console.log(menu.children);
+
+let main = document.getElementById('main');
+console.log(main.textContent);
+console.log(main.innerText);
+
+// document.body.innerHTML = '';
