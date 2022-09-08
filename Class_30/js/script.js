@@ -5,7 +5,7 @@ const form = document.querySelector("#signup");
 function showInstruction(element, state) {
   const instruction = element.parentNode.querySelector("small");
   element.className = state ? "success" : "error";
-  instruction.innerText =  state ? "" : "Please enter " + element.id
+  instruction.innerText = state ? "" : "Please enter " + element.id;
 }
 
 function hasValue(element) {
@@ -14,11 +14,11 @@ function hasValue(element) {
     return false;
   } else {
     showInstruction(element, true);
-    if(element.id == 'email'){
-        if(!validateEmail(email)){
-            email.parentNode.querySelector("small").innerText = EMAIL_INVALID;
-            email.className = "error";
-        };
+    if (element.id == "email") {
+      if (!validateEmail(email)) {
+        email.parentNode.querySelector("small").innerText = EMAIL_INVALID;
+        email.className = "error";
+      }
     }
     return true;
   }
@@ -45,12 +45,12 @@ function hasValue(element) {
 */
 
 function validateEmail(element) {
-    const emailRegex =
-		/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    console.log(emailRegex.test(element.value));
-    return emailRegex.test(element.value);
-  }
-  
+  const emailRegex =
+    /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  console.log(emailRegex.test(element.value));
+  return emailRegex.test(element.value);
+}
+
 form.addEventListener("submit", function (event) {
   // stop form submission
   event.preventDefault();
@@ -62,11 +62,11 @@ form.addEventListener("submit", function (event) {
   const email_state = hasValue(email);
 
   let email_validation = false;
-  if(email_state){
+  if (email_state) {
     email_validation = validateEmail(email);
   }
-    
-/*
+
+  /*
   if(email_state && !email_validation){
     let instruction = email.parentNode.querySelector("small");
     email.className = "error";
@@ -76,8 +76,11 @@ form.addEventListener("submit", function (event) {
 
   //if(hasValue(email) && hasValue(name))
   //if(hasValue(name) && hasValue(email))
-  if(name_state && email_state && email_validation)
-    form.submit();
+  if (name_state && email_state && email_validation) {
+    //form.submit();
+    url = "signup.html?name="+encodeURIComponent(name.value);
+    document.location.href = url;
+  }
 });
 
 /*if(element.id == 'name')
