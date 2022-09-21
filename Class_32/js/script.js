@@ -66,7 +66,6 @@ class Cookie {
 var i = 1;
 Cookie.set("connection", i, expires, "/");
 
-
 function readTextFile(file)
 {
     var rawFile = new XMLHttpRequest();
@@ -84,7 +83,6 @@ function readTextFile(file)
     }
     rawFile.send(null);
 }
-
 // readTextFile("file:///C:/Users/Tatjana/Downloads/ccc.txt");
 
 // https://www.w3schools.com/html/tryit.asp?filename=tryhtml5_webstorage_local_clickcount
