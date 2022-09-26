@@ -33,7 +33,7 @@ function output(input) {
 }
 
 const utterances = [
-  ["hi", "hey", "hello", "good morning", "good afternoon"],
+  ["hi", "hey", "hello", "good morning", "good afternoon","labdien"],
   ["help me", "can you help me", "i need help"],
   ["how to buy on this website"],
   ["what currency do you accept"],
@@ -102,4 +102,7 @@ function addChatEntry(input, product) {
   }, 2000);
 }
 
-module.exports.compare = compare;
+//module.exports.compare = compare;
+//module.exports.utterances = utterances;
+//module.exports.answers = answers;
+module.exports = {compare, utterances, answers};
